@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="media-queries.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>🐷 Pig Game</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="overlay hidden"></div>
+      <h1>🐷 Pig Game</h1>
+
+      <div class="flex-container-mobile">
+        <div class="player-container-0 active">
+          <h2 class="player-0-name">Player 1</h2>
+          <div class="score-container">
+            <div class="current-score">
+              <p>Holding</p>
+              <span id="player-holding-0">0</span>
+            </div>
+            <div id="player-score-0">0</div>
+          </div>
+        </div>
+
+        <img src="dice-1.png" alt="Dice" class="dice hidden" />
+
+        <div class="player-container-1">
+          <h2 class="player-1-name">Player 2</h2>
+          <div class="score-container">
+            <div class="current-score">
+              <p>Holding</p>
+              <span id="player-holding-1">0</span>
+            </div>
+            <div id="player-score-1">0</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="message">🎲 Player 1 Turn</p>
+
+      <div class="controller-container">
+        <button class="btn-how-to-play">
+          <i class="fas fa-question"></i>
+        </button>
+
+        <div class="buttons-container">
+          <button class="roll">🎲 Roll</button>
+          <button class="hold">✅ Hold</button>
+          <button class="new-game">🔄 New Game</button>
+        </div>
+
+        <button class="config"><i class="fas fa-cog"></i></button>
+      </div>
+
+      <div class="help-container hidden">
+        <h1>🐷 Pig Game</h1>
+        <p>
+          Pig Game is a simple dice game first described in print by
+          <a target="blank_" href="https://en.wikipedia.org/wiki/John_Scarne"
+            >John Scarne</a
+          >
+          in 1945. This Web App version was made by
+          <a target="blank_" href="https://github.com/athosfranco"
+            >Athos Franco</a
+          >.
+        </p>
+        <div class="how2play">
+          <h2>🎲 How to Play? 🎲</h2>
+          <p>
+            Each turn, a player repeatedly rolls a dice until either a 1 is
+            rolled or the player decides to "hold":
+          </p>
+
+          <p>
+            ❗ If the player rolls a 1, <strong>they score nothing</strong> and
+            it becomes the next player's turn.
+          </p>
+          <p>
+            ❗ If the player rolls any other number,
+            <strong>it is added to their turn total</strong> and the player's
+            turn continues.
+          </p>
+          <p>
+            ❗ If a player chooses to "hold",
+            <strong>their turn total is added to their holding score</strong>,
+            and it becomes the next player's turn.
+          </p>
+        </div>
+        <p>The first player to hold 100 or more points wins.</p>
+
+        <button class="close-help">Close</button>
+      </div>
+
+      <div class="new-game-container hidden">
+        <h3>Start a new game?</h3>
+        <button onclick="refreshPage()" class="btn-yes">Yes</button>
+        <button class="btn-no">No</button>
+      </div>
+
+      <div class="configuration-container hidden">
+        <h2><i class="fas fa-cog"></i> Settings</h2>
+        <div class="flex">
+          <p>Player 1 Name</p>
+          <input
+            class="player-0-input"
+            type="text"
+            placeholder="Player 1"
+            maxlength="14"
+          />
+        </div>
+        <div class="flex">
+          <p>Player 2 Name</p>
+          <input
+            class="player-1-input"
+            type="text"
+            placeholder="Player 2"
+            maxlength="14"
+          />
+        </div>
+
+        <button class="volume">
+          <i class="fas fa-volume-up"></i> Sound effects ON
+        </button>
+        <button class="btn-log">
+          <i class="fas fa-comment"></i> Log Messages ON
+        </button>
+        <button class="close-config">Close</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

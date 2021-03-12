@@ -1,0 +1,91 @@
+@media only screen and (min-width: 1023px) and (max-width: 1024px) {
+  .flex-container-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-top: 15vh;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .help-container h1 {
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+
+  .help-container p {
+    font-size: 1.7rem;
+  }
+
+  #player-holding-0,
+  #player-holding-1 {
+    font-size: 3.4rem;
+  }
+
+  #player-score-0,
+  #player-score-1 {
+    font-size: 5rem;
+  }
+
+  .dice {
+    width: 120px;
+    height: 120px;
+  }
+
+  .message {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+
+  .controller-container {
+    margin-top: 10rem;
+  }
+
+  .controller-container button {
+    font-size: 2.5rem;
+  }
+
+  .configuration-container {
+    transform: scale(1.5);
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .flex-container-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-top: 6vh;
+    font-size: 3rem;
+  }
+
+  .controller-container {
+    margin-top: 1rem;
+  }
+
+  .controller-container button {
+    font-size: 1.7rem;
+  }
+}
+
+/* Dice position aligned center bug fix */
+
+@media only screen and (max-width: 1023px) {
+  /* Iphone X dice position bug fix */
+  .flex-container-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
